@@ -1,0 +1,7 @@
+.App {
+  display: flex;
+  align-items: top;
+  justify-content: center;
+  display: flex;
+  min-height: 100vh;
+}
