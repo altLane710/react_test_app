@@ -12,6 +12,7 @@ const CountdownTimer = () => {
   useEffect(() => {
     if (timeRemaining <= 0) {
       endTest();
+      return;
     }
 
     const timer = setTimeout(() => {
