@@ -10,14 +10,14 @@ const CountdownTimer = () => {
   );
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      if (timeRemaining <= 0) {
-        clearInterval(interval);
-        endTest();
-      }
+    if (timeRemaining <= 0) {
+      endTest();
+    }
+
+    const timer = setTimeout(() => {
       setTimeRemaining((seconds) => seconds - 1);
     }, 1000);
-    return () => clearInterval(interval);
+    return () => clearTimeout(timer);
   }, [timeRemaining]);
 
   return (
